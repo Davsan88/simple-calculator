@@ -8,5 +8,24 @@ function calculate(numberOne, numberTwo, operation) {
     } 
     
     let = result;
-    switch (operation)
+    switch (operation) {
+        case 'add':
+            result = `${numberOne} + ${numberTwo} = ${numberOne + numberTwo}`;
+            break;
+        case 'substract':
+            result = `${numberOne} - ${numberTwo} = ${numberOne - numberTwo}`;
+            break;
+        case 'multiply':
+            result = `${numberOne} * ${numberTwo} = ${numberOne * numberTwo}`;
+            break;
+        case 'divide':
+            if (numberTwo === 0) {
+                result = "Division by zero is not allowed.";
+            result = `${numberOne} / ${numberTwo} = ${numberOne / numberTwo}`;
+            break;
+        default:
+            result = "Invalid operation.";
+    }
+
+    return result;
 }
