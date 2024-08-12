@@ -2,8 +2,11 @@
 const numberOne = parseFloat(document.getElementById('number1').value); 
 const numberTwo = parseFloat(document.getElementById('number2').value);
 
-function calculate(numberOne, numberTwo) {
+function calculate(numberOne, numberTwo, operation) {
     if (!isNaN(numberOne) && !isNaN(numberTwo)) {
-        return alert("Please, introduce a valid number")
-    }
+        return alert("Please enter valid number");
+    } 
+    
+    let = result;
+    switch (operation)
 }
