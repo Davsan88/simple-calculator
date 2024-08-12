@@ -1,8 +1,6 @@
 // Retrieve the value entered in the input field as a string and convert this string to a floating-point number
 const numberOne = parseFloat(document.getElementById('number1').value); 
 const numberTwo = parseFloat(document.getElementById('number2').value);
-// Access the HTML element where the result will be displayed
-const result = document.getElementById('result');
 
 function calculate(numberOne, numberTwo, operation) {
     // Step 1: Validate the inputs
