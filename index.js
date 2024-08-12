@@ -1,8 +1,8 @@
-// Retrieve the value entered in the input field as a string and convert this string to a floating-point number
-const numberOne = parseFloat(document.getElementById('number1').value); 
-const numberTwo = parseFloat(document.getElementById('number2').value);
+function calculate(operation) {
+    // Retrieve the value entered in the input field as a string and convert this string to a floating-point number
+    const numberOne = parseFloat(document.getElementById('number1').value);
+    const numberTwo = parseFloat(document.getElementById('number2').value);
 
-function calculate(numberOne, numberTwo, operation) {
     // Step 1: Validate the inputs
     if (isNaN(numberOne) || isNaN(numberTwo)) {
         return alert("Please enter valid numbers."); // Alert if inputs are not valid numbers
@@ -32,5 +32,5 @@ function calculate(numberOne, numberTwo, operation) {
             result = "Invalid operation.";
     }
 
-    document.getElementById('result').innerText = result; // Display the result
+    document.getElementById('result').innerText = result; // Return the result
 }
