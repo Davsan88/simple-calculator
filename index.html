@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script> <!-- Defer script execution until after the document has been parsed -->
 </head>
+
 <body>
     <h1>Basic Calculator</h1>
     <div class="calculator">
@@ -15,13 +17,15 @@
             <input id="number2" type="number" placeholder="Enter second number">
         </div>
         <div id="buttonsDiv">
-            <button id="addBtn">+</button>
-            <button id="subtractBtn">-</button>
-            <button id="multiplyBtn">*</button>
-            <button id="divideBtn">/</button>
+            <button id="addBtn" onclick="calculate('add')">+</button>
+            <button id="subtractBtn" onclick="calculate('subtract')">-</button>
+            <button id="multiplyBtn" onclick="calculate('multiply')">*</button>
+            <button id="divideBtn" onclick="calculate('divide')">/</button>
+
         </div>
     </div>
     <div id="result"></div>
-    
+
 </body>
+
 </html>
