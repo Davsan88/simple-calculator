@@ -3,29 +3,34 @@ const numberOne = parseFloat(document.getElementById('number1').value);
 const numberTwo = parseFloat(document.getElementById('number2').value);
 
 function calculate(numberOne, numberTwo, operation) {
-    if (!isNaN(numberOne) && !isNaN(numberTwo)) {
-        return alert("Please enter valid number");
-    } 
-    
-    let = result;
+    // Step 1: Validate the inputs
+    if (isNaN(numberOne) || isNaN(numberTwo)) {
+        return alert("Please enter valid numbers."); // Alert if inputs are not valid numbers
+    }
+
+    let result; // Declare a variable to store the result
+
+    // Step 2: Use a switch statement to determine the operation
     switch (operation) {
-        case 'add':
+        case 'add': // Case for addition
             result = `${numberOne} + ${numberTwo} = ${numberOne + numberTwo}`;
             break;
-        case 'substract':
+        case 'subtract': // Case for subtraction
             result = `${numberOne} - ${numberTwo} = ${numberOne - numberTwo}`;
             break;
-        case 'multiply':
+        case 'multiply': // Case for multiplication
             result = `${numberOne} * ${numberTwo} = ${numberOne * numberTwo}`;
             break;
-        case 'divide':
+        case 'divide': // Case for division
             if (numberTwo === 0) {
-                result = "Division by zero is not allowed.";
-            result = `${numberOne} / ${numberTwo} = ${numberOne / numberTwo}`;
+                result = "Division by zero is not allowed."; // Handle division by zero
+            } else {
+                result = `${numberOne} / ${numberTwo} = ${numberOne / numberTwo}`;
+            }
             break;
-        default:
+        default: // Default case for invalid operations
             result = "Invalid operation.";
     }
 
-    return result;
+    return result; // Return the result
 }
