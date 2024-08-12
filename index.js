@@ -32,5 +32,5 @@ function calculate(numberOne, numberTwo, operation) {
             result = "Invalid operation.";
     }
 
-    return result; // Return the result
+    document.getElementById('result').innerText = result; // Display the result
 }
